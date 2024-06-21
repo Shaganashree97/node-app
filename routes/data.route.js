@@ -1,4 +1,5 @@
 import express from 'express'
+import { dataIndex, dataCreate, dataUpdate, dataDelete } from '../controllers/data.controller';
 
 const router = express.Router()
 
@@ -13,24 +14,16 @@ router.get('/data', (req, res) => {
 
 // data/
 // to read
-router.get('/', (req, res) => {
-    res.send("Get all data lists");
-})
+router.get('/', dataIndex);
 
 // to create
-router.post('/', (req, res) => {
-    res.send("Create a data");
-})
+router.post('/', dataCreate);
 
 // to update
-router.put('/:id', (req, res) => {
-    res.send("Update data");
-})
+router.put('/:id', dataUpdate);
 
 // to delete
-router.delete('/:id', (req, res) => {
-    res.send("Delete data");
-})
+router.delete('/:id', dataDelete);
 
 
 export default router;
