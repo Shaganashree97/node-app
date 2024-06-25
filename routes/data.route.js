@@ -1,5 +1,5 @@
 import express from 'express'
-import { dataIndex, dataCreate, dataUpdate, dataDelete } from '../controllers/data.controller';
+import { dataIndex, dataCreate, dataUpdate, dataDelete } from '../controllers/data.controller.js';
 
 const router = express.Router()
 
