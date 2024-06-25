@@ -3,7 +3,14 @@ export const dataIndex = (req, res) => {
 };
 
 export const dataCreate = (req, res) => {
-    res.send("Create a data");
+    // res.send("Create a data");
+    // create the data
+
+    console.log(req.body);
+
+    return res.json(req.body);
+
+    // id, name, info
 };
 
 export const dataUpdate = (req, res) => {
